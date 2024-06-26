@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2x2 Grid with CSS Grid</title>
+  <style>
+    .holder {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two columns each occupying 1 fraction of available space */
+      grid-template-rows: repeat(2, 1fr);    /* Two rows each occupying 1 fraction of available space */
+      gap: 10px;                             /* Gap between grid items */
+      width: 200px;                          /* Total width of the grid container */
+    }
+    .item {
+      background-color: #3498db;             /* Sample background color */
+      color: white;                          /* Text color */
+      padding: 10px;                         /* Padding for spacing */
+      border: 1px solid #2980b9;             /* Border for visual clarity */
+      text-align: center;                    /* Center align text */
+    }
+  </style>
 </head>
-
 <body>
-    <div class="holder">
-    	<div class="item item-1">1</div>
-    	<div class="item item-2">2</div>
-    	<div class="item item-3">3</div>
-    	<div class="item item-4">4</div>
-   </div>
-   <script type="text/javascript" src="./script.js">
-</script>
+
+<div class="holder">
+  <div class="item">Item 1</div>
+  <div class="item">Item 2</div>
+  <div class="item">Item 3</div>
+  <div class="item">Item 4</div>
+</div>
 
 </body>
-
 </html>
